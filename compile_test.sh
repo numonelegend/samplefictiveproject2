@@ -1,4 +1,5 @@
-PYENV_HOME=$WORKSPACE/venv
+MY_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PYENV_HOME=$MY_PATH/venv
 
 VERSION=$1
 BUILD_NUMBER=$2
