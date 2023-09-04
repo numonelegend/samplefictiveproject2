@@ -2,8 +2,8 @@ node {
     stage('Checkout') {
         checkout scm
     }
-    docker.withRegistry('//https://hub.docker.com/repository/docker/sachy6/ubuntu_public', 'DockerHub') {
-	    def dockerImageName = "hub.docker.com/repository/docker/sachy6/ubuntu_public:pythonlatest2"
+    docker.withRegistry('https://registry.hub.docker.com', 'DockerHub') {
+	    def dockerImageName = "sachy6/ubuntu_public:pythonlatest2"
 
 	    docker.image("${dockerImageName}").inside("-u 0:0"){
             try{
